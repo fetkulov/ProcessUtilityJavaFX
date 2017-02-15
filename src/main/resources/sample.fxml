@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.demofx.MenuController">
+    <top>
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+                <Menu text="File">
+                        <MenuItem fx:id="importAndCompare" onAction="#importAction" text="Import and Compare"/>
+                        <MenuItem fx:id="saveReportBt" onAction="#saveAction" text="Save As"/>
+                        <MenuItem fx:id="exportExcel" onAction="#exportExcelAction" text="Export to Excel"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem onAction="#exitAction" text="Exit"/>
+                </Menu>
+                <Menu text="Run">
+                        <MenuItem onAction="#executeTaskList" text="Execute"/>
+                </Menu>
+                <Menu text="Help">
+                        <SeparatorMenuItem/>
+                        <MenuItem text="About"/>
+                </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane fx:id="gridPane">
+        </GridPane>
+    </center>
+</BorderPane>
